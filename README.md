@@ -11,4 +11,5 @@ One page wildlife site.
 - **CSS**
 - **JavaScript**
 
-![Illustration for the project](https://github.com/ckachok/My-project-2020-2021/tree/preview/image/wildlife.jpg)
+![Illustration for the project](https://github.com/ckachok/My-project-2020-2021/blob/preview/image/wildlife.JPG)
+
