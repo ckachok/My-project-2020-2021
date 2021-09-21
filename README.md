@@ -40,7 +40,7 @@ A multi-page site about an online zoo, with the implementation of the functions 
 - **JavaScript**
 - **Figma**
 
-![Illustration for the project](https://github.com/ckachok/My-project-2020-2021/blob/preview/image/online-zoo.jpg)
+![Illustration for the project](https://github.com/ckachok/My-project-2020-2021/blob/preview/image/online-zoo.JPG)
 
 # <p align="center">[Photo filter](https://rolling-scopes-school.github.io/My-project-2020-2021/photo-filter/)</p>
 
