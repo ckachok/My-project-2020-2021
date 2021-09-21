@@ -1,6 +1,6 @@
 ##### My-project-2020-2021
 
-# <p align="center">[Museum](https://rolling-scopes-school.github.io/My-project-2020-2021/museum/)</p>
+# <p align="center">[Museum](https://ckachok.github.io/My-project-2020-2021/museum/)</p>
 
 ### Description:
 One-page website about the Louvre Museum.
