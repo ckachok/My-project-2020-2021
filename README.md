@@ -1,6 +1,6 @@
 ##### My-project-2020-2021
 
-# <p align="center">[Vertical slider](https://rolling-scopes-school.github.io/My-project-2020-2021/vertical-slider/)</p>
+# <p align="center">[Vertical slider](https://ckachok.github.io/My-project-2020-2021/vertical-slider/)</p>
 
 ### Description:
 Vertical slider for images with two-way slide change.
