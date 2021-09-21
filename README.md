@@ -1,6 +1,6 @@
 ##### My-project-2020-2021
 
-# <p align="center">[Wildlife](https://rolling-scopes-school.github.io/My-project-2020-2021/wildlife/)</p>
+# <p align="center">[Wildlife](https://ckachok.github.io/My-project-2020-2021/wildlife/)</p>
 
 ### Description:
 One page wildlife site.
