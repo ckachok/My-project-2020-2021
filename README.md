@@ -1,6 +1,6 @@
 ##### My-project-2020-2021
 
-# <p align="center">[Custom video player](https://rolling-scopes-school.github.io/My-project-2020-2021/custom-video-player/)</p>
+# <p align="center">[Custom video player](https://ckachok.github.io/My-project-2020-2021/custom-video-player/)</p>
 
 ### Description:
 Video player with its own appearance, playback functions, sound change, video change, rewind, full screen mode.
