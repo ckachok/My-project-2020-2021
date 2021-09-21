@@ -1,6 +1,6 @@
 ##### My-project-2020-2021
 
-# <p align="center">[Virtual piano](https://rolling-scopes-school.github.io/My-project-2020-2021/virtual-piano/)</p>
+# <p align="center">[Virtual piano](https://ckachok.github.io/My-project-2020-2021/virtual-piano/)</p>
 
 ### Description:
 An app for playing music like a piano.
