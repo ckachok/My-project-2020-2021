@@ -3,7 +3,7 @@
 # <p align="center">[Photo filter](https://rolling-scopes-school.github.io/My-project-2020-2021/photo-filter/)</p>
 
 ### Description:
-Приложение для обработки изображений имеющее следующие фильтры - blur, invert, sepia, saturate, hue rotate.
+An image processing application having the following filters - - blur, invert, sepia, saturate, hue rotate.
 
 ### Technologies used:
 
