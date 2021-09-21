@@ -1,11 +1,16 @@
-# ckachok-JSFE2021Q1
+##### My-project-2020-2021
 
-**Wildlife** - https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/wildlife/
+# <p align="center">[Online Zoo](https://rolling-scopes-school.github.io/My-project-2020-2021/online-zoo/pages/landing/)</p>
 
-**Virtual-piano** - https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/virtual-piano/
+### Description:
+A multi-page site about an online zoo, with the implementation of the functions of observing animals.
 
-**Online-zoo** - https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/online-zoo/pages/landing/landing.html
+### Technologies used:
 
-**Photo-filter** - https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/photo-filter/
+- **HTML** 
+- **CSS**
+- **SCSS/SASS**
+- **JavaScript**
+- **Figma**
 
-Private repository for @ckachok
+![Illustration for the project](https://github.com/ckachok/My-project-2020-2021/blob/preview/image/online-zoo.jpg)
