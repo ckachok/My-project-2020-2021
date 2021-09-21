@@ -1,6 +1,6 @@
 ##### My-project-2020-2021
 
-# <p align="center">[Photo filter](https://rolling-scopes-school.github.io/My-project-2020-2021/photo-filter/)</p>
+# <p align="center">[Photo filter](https://ckachok.github.io/My-project-2020-2021/photo-filter/)</p>
 
 ### Description:
 An image processing application having the following filters - - blur, invert, sepia, saturate, hue rotate.
