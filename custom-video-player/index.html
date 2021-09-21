@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Custom video player</title>
+</head>
+<body>
+  <section class="section section-video" id="video">
+    <div class="container">
+      <div class="player">
+        <button class="btn-play">
+          <img src="assets/svg/player__play-icon.svg" alt="Start video">
+        </button>
+        <video class="player__viewport"
+               src="assets/video/section__video__the-louvre.mp4"
+               poster="assets/img/section__video__poster1-louvre.jpg">
+        </video>
+        <div class="player__control">
+          <button class="prev">
+            <img src="assets/svg/player__previous-icon.svg" alt="Previous video">
+          </button>
+          <button class="playback">
+            <img src="assets/svg/player__playback-icon.svg" alt="Playback" id="playback">
+          </button>
+          <button class="pause">
+            <img src="assets/svg/player__pause-icon.svg" alt="Pause">
+          </button>
+          <button class="next">
+            <img src="assets/svg/player__next-icon.svg" alt="Next video">
+          </button>
+          <input class="progress playback__progress" type="range" value="0" min="0" max="100" step="0.01">
+          <button class="volume">
+            <img id="volume" src="assets/svg/player__volume-icon.svg" alt="Volume">
+          </button>
+          <input class="progress volume__progress" type="range" value="42" min="0" max="100" step="1">
+          <button class="fullscreen">
+            <img src="assets/svg/player__fullscreen-icon.svg" alt="Fullscreen">
+          </button>
+        </div>
+      </div>
+      <div class="section-video__text-content">
+        <h2 class="section__title
+                   section-video__title
+                   section-white__title">
+                   Video journey
+        </h2>
+        <p class="section-video__text">Enter and visit one of the most famous museums in the world and
+                                       enjoy masterpieces such as Mona Lisa or Hammurabi's Code
+        </p>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
