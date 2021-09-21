@@ -1,11 +1,14 @@
-# ckachok-JSFE2021Q1
+##### My-project-2020-2021
 
-**Wildlife** - https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/wildlife/
+# <p align="center">[Photo filter](https://rolling-scopes-school.github.io/My-project-2020-2021/photo-filter/)</p>
 
-**Virtual-piano** - https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/virtual-piano/
+### Description:
+Приложение для обработки изображений имеющее следующие фильтры - blur, invert, sepia, saturate, hue rotate.
 
-**Online-zoo** - https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/online-zoo/pages/landing/landing.html
+### Technologies used:
 
-**Photo-filter** - https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/photo-filter/
+- **HTML** 
+- **CSS**
+- **JavaScript**
 
-Private repository for @ckachok
+![Illustration for the project](https://github.com/ckachok/My-project-2020-2021/blob/preview/image/photo-filter.JPG)
