@@ -27,7 +27,7 @@ One-page website about the Louvre Museum.
 
 ![Illustration for the project](https://github.com/ckachok/My-project-2020-2021/blob/preview/image/museum.JPG)
 
-# <p align="center">[Online Zoo](https://ckachok.github.io/My-project-2020-2021/online-zoo/pages/landing/)</p>
+# <p align="center">[Online Zoo](https://ckachok.github.io/My-project-2020-2021/online-zoo/pages/landing/landing.html)</p>
 
 ### Description:
 A multi-page site about an online zoo, with the implementation of the functions of observing animals.
