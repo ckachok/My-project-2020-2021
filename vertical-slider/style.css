@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+button {
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.slider__container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider__left-side {
+  width: 35%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform .5s ease-in-out;
+}
+
+.left-side__slide {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.slide__title {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.slide__description {
+  font-size: 20px;
+  margin: 10px 0 0;
+}
+
+.slider__right-side {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  height: 100vh;
+  width: 65%;
+  transition: transform .5s ease-in-out;
+}
+
+.right-side__slide {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.slider__btn {
+  position: absolute;
+  left: 35%;
+  top: 50vh;
+  z-index: 100;
+  padding: 15px;
+  font-size: 16px;
+  color: #aaa;
+  background-color: #fff;
+  transition: color .7s;
+}
+
+.slider__btn:hover {
+  color: #222;
+  transition: color .7s;
+}
+
+.slider__btn--down {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  transform: translateX(-100%);
+}
+
+.slider__btn--up {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: translateY(-100%);
+}

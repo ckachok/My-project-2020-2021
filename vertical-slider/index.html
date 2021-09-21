@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Vertical Slider</title>
+</head>
+<body>
+  <div class="slider__container">
+    <div class="slider__left-side">
+      <div class="left-side__slide" style="background: linear-gradient(315deg, rgb(79, 72, 54), rgb(137, 127, 118), rgb(208, 199, 184));">
+        <h1 class="slide__title">Earthquake</h1>
+        <p class="slide__description">natural phenomenon</p>
+        <p class="slide__description">(element of earth)</p>
+      </div>
+      <div class="left-side__slide" style="background: linear-gradient(135deg, rgb(153, 180, 250), rgb(74, 96, 181), rgb(8, 21, 66));">
+        <h1 class="slide__title">Lightning</h1>
+        <p class="slide__description">natural phenomenon</p>
+        <p class="slide__description">(element of light)</p>
+      </div>
+      <div class="left-side__slide" style="background: linear-gradient(135deg, rgb(238, 191, 61), rgb(126, 89, 60) 58%, rgb(39, 51, 75) 85%);">
+        <h1 class="slide__title">Tornado</h1>
+        <p class="slide__description">natural phenomenon</p>
+        <p class="slide__description">(element of wind)</p>
+      </div>
+      <div class="left-side__slide" style="background: linear-gradient(135deg, rgb(213, 224, 222), rgb(30, 68, 65) 58%, rgb(15, 40, 44) 85%);">
+        <h1 class="slide__title">Tsunami</h1>
+        <p class="slide__description">natural phenomenon</p>
+        <p class="slide__description">(element of water)</p>
+      </div>
+      <div class="left-side__slide" style="background: linear-gradient(135deg, rgb(252, 134, 1), rgb(104, 30, 21) 47%, rgb(28, 22, 22) 87%);">
+        <h1 class="slide__title">Volcano</h1>
+        <p class="slide__description">natural phenomenon</p>
+        <p class="slide__description">(element of fire)</p>
+      </div>
+    </div>
+    <div class="slider__right-side">
+      <div class="right-side__slide" style="background-image: url('assets/volcano.jpg');"></div>
+      <div class="right-side__slide" style="background-image: url('assets/tsunami.jpg');"></div>
+      <div class="right-side__slide" style="background-image: url('assets/tornado.jpg');"></div>
+      <div class="right-side__slide" style="background-image: url('assets/lightning.jpg');"></div>
+      <div class="right-side__slide" style="background-image: url('assets/earthquake.jpg');"></div>
+    </div>
+    <div class="slider__btn-container">
+      <button class="slider__btn slider__btn--down">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+      <button class="slider__btn slider__btn--up">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

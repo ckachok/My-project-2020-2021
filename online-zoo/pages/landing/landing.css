@@ -1,0 +1,3311 @@
+/*Basic styles*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6F9FA;
+}
+
+img {
+max-width: 100%;
+}
+
+.container {
+  max-width: 1540px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.main-title {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+}
+
+/*Reset-style*/
+.list {     
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn {
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: #F7F7F7;
+  cursor: pointer;
+}
+
+.input {
+  outline: none;
+}
+
+/*Header*/
+
+.header {
+  width: 100%;
+  height: 108px;
+  background-color: #2A8086;
+  filter: drop-shadow(0px 1px 10px rgba(18, 87, 91, 0.25));
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__link {
+  margin-top: 1px;
+}
+
+.logo {
+  color: #C5E1E6;
+  transition: all 0.8s;
+}
+
+.logo:hover {
+  color: #adb62b;
+  transition: all 0.8s;
+}
+
+.navbar {
+  min-width: 515px;
+  margin-left: 53px;
+}
+
+.navbar__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__item {
+  display: inline-block;
+}
+
+.navbar__link {
+  position: relative;
+  display: block;
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 23px;
+  color: #C5E1E6;
+}
+
+.navbar__link_inactive::before {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  border-bottom: 2px solid #C5E1E6;
+  content: '';
+}
+
+.navbar__link_inactive:hover::before,
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+.navbar__link_inactive::before,
+.navbar__link::after {
+  -webkit-transition: all 0.4s ease;
+     -moz-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+}
+
+.navbar__link_active {
+  border-bottom: 2px solid #C5E1E6;
+  pointer-events: none;
+  cursor: default;
+}
+
+.search {
+  transition: transform 0.5s;
+}
+
+.search:hover {
+  transition: transform 0.5s;
+  transform: scale(1.2);
+}
+
+.search__input {
+  width: 300px;
+  height: 35px;
+  padding-left: 10px;
+  border-radius: 15px 15px 15px 15px;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.search__input:hover {
+  opacity: 1;
+  transition: opacity 0.8s;
+}
+
+.search__btn {
+  margin-left: 6px;
+  margin-top: 1px;
+}
+
+.btn_log-in,
+.btn_sign-up {
+  min-width: 56px;
+  margin-left: 40px;
+}
+
+.btn_sign-up {
+  margin-left: 24px;
+}
+
+.btn_log-out {
+  position: absolute;
+  top: 100%;
+  right: -2.5%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.btn__text_log-in,
+.btn__text_sign-up,
+.btn__text_log-out {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #C5E1E6;
+  transition: color 0.8s;
+}
+
+.btn__text_log-in:hover,
+.btn__text_sign-up:hover,
+.btn__text_log-out:hover {
+  color: #adb62b;
+  transition: color 0.8s;
+}
+
+.btn_log-in_active,
+.btn_sign-up_active {
+  min-width: 97px;
+  height: 52px;
+  box-sizing: border-box;
+  border: 1px solid #C5E1E6;
+  border-radius: 100px;
+  padding-top: 1px;
+  margin-bottom: 2px;
+}
+
+.btn_style_login-user_active {
+  position: relative;
+  min-width: 56px;
+  min-height: 56px;
+  margin: 0 0 2px 31px;
+  margin-left: 31px;
+  background-image: url(../../assets/icons/log-in.hover\(1200\ desktop\).svg);
+  background-repeat: no-repeat;
+  transition: background-image 0.8s
+}
+
+.user-name {
+  position: absolute;
+  bottom: 100%;
+  font-size: 14px;
+  text-transform: none;
+  color: #adb62b;
+  pointer-events: none;
+}
+
+/* Section - Watch your favorite animals online */
+
+.watch-favorite-animals {
+  background-image: url(../../assets/images/watch-favorite-animal-background-1.svg), url(../../assets/images/watch-favorite-animal-background-2.svg);
+  width: 100%;
+  height: 795px;
+  background-position: top;
+  background-repeat: repeat no-repeat;
+}
+
+.watch-favorite-animals__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  width: 627px;
+  margin-top: 108px;
+}
+
+.visual-content {
+  position: relative;
+  height: 670px;
+  margin-top: 48px;
+}
+
+.watch-favorite-animals__title {
+  margin: 0;
+  font-family: "Rubik";
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 76px;
+  color: #F3F7F8;
+}
+
+.watch-favorite-animals__title_mod {
+  font-weight: 500;
+  font-size: 64px;
+}
+
+.text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #F3F7F8;
+}
+
+.watch-favorite-animals__text {
+  margin: 29px 178px 29px 0;
+}
+
+.watch-favorite-animals__btn {
+  width: 258px;
+  height: 52px;
+  margin-top: 57px;
+  margin-left: -1px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 50px rgba(185, 213, 217, 0.6);
+  border: 0px solid transparent;
+  border-radius: 100px;
+  transition: background-color 0.9s;
+}
+
+.btn-donate {
+  display: none;
+}
+
+.watch-favorite-animals__btn_text {
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #0D444D;
+}
+
+.watch-favorite-animals__btn:hover {
+  background-color: #adb62b;
+  transition: background-color 0.9s, border 0.3s;
+}
+
+.watch-favorite-animals__btn:active {
+  border: 3px solid #C5E1E6;
+  transition: border 0.3s;
+}
+
+.panda {
+  max-width: 100%;
+  height: 666px;
+}
+
+.panda path:nth-child(2) {
+  transition: all 0.9s;
+}
+
+.panda path:nth-child(2):hover {
+  fill-opacity: 1;
+  transition: all 0.9s;
+}
+
+.youtube {
+  position: absolute;
+  width: calc(120 / 804 * 100%);
+  height: 120px;
+  top: 46%;
+  left: 46.6%;
+}
+
+.youtube__link path:first-child {
+  transition: all 0.9s;
+}
+
+.youtube__link:hover path:first-child {
+  fill: red;
+  fill-opacity: 1;
+  transition: all 0.9s;
+}
+
+/* Section - How it works */
+
+.how-it-works {
+  width: 100%;
+  height: 816px;
+  background-image: url(../../assets/images/how-it-works-background-1.svg), url(../../assets/images/how-it-works-background-2.svg), url(../../assets/images/how-it-works-background-3.svg);
+  background-position: bottom, center 84%, center 91.5%;
+  background-repeat: repeat no-repeat;
+}
+
+.how-it-works__container {
+  position: relative;
+}
+
+.title {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.05px;
+  text-transform: uppercase;
+  color: #0D444D;
+}
+
+.how-it-works__title {
+  position: absolute;
+  top: -16.4%;
+  left: 2%;
+}
+
+.how-it-works__content {
+  width: calc(1275 / 1540 * 100%);
+  height: 179px;
+  display: flex;
+  justify-content: space-between;
+  margin: 43px 124px 0 124px;
+}
+
+.content__circle {
+  position: relative;
+  width: 145px;
+  height: 145px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.06);
+  border-radius: 100px;
+}
+
+.content__icon {
+  width: 64px;
+  height: 64px;
+  margin: 41px 0 0 41px;
+}
+
+.content__description {
+  position: absolute;
+  top: 101%;
+  left: -45%;
+  width: 200%;
+}
+
+.content__text {
+  font-family: "Roboto";
+  text-align: center;
+  color: #0D444D;
+}
+
+.tooltip__text {
+  position: absolute;
+  bottom: 118%;
+  left: -93.5%;
+  visibility: hidden;
+  width: 410px;
+  height: 172px;
+  padding: 31px 6px 30px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #0D444D;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 30px rgb(0 0 0 / 6%);
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.tooltip__text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 46%;
+  border-width: 18px;
+  border-style: solid;
+  border-color: #FFFFFF transparent transparent transparent;
+}
+
+.content__circle:hover .tooltip__text {
+  visibility: hidden;
+  opacity: 1;
+  transition: all 0.8s;
+}
+
+.how-it-works__bamboo-first {
+  position: absolute;
+  width: 117px;
+  height: 222px;
+  top: 43.4%;
+  left: -12.25%;
+}
+
+.how-it-works__tree-first {
+  position: absolute;
+  width: 131px;
+  height: 230px;
+  top: 41.5%;
+  left: 2%;
+}
+
+.how-it-works__tree-two {
+  position: absolute;
+  width: 90px;
+  height: 158px;
+  top: 48.9%;
+  left: 39.3%;
+}
+
+.how-it-works__panda {
+  position: absolute;
+  width: 169px;
+  height: 155px;
+  top: 60.9%;
+  left: 49.4%;
+}
+
+.how-it-works__bamboo-two {
+  position: absolute;
+  width: 149px;
+  height: 283px;
+  top: 46.9%;
+  left: 55.15%;
+}
+
+.how-it-works__tree-three {
+  position: absolute;
+  width: 131px;
+  height: 230px;
+  top: 55.7%;
+  left: 92.55%;
+}
+
+/* Section - Pets in zoo */
+
+.pets-in-zoo {
+  width: 100%;
+  height: 978px;
+}
+
+.pets-in-zoo__container {
+  margin-top: 59px;
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.content__middle {
+  position: relative;
+  width: var(--slide-width-px);
+}
+
+.slider {
+  overflow: hidden;
+  width: var(--slide-width-px);
+}
+
+:root {
+  --number-of-slides: 2; /* is equal to number of slides + 1 */
+  --slide-width: 1480;
+  --slide-width-px: 1480px;
+  --slide-margin-right: 20;
+  --slide-margin-right-px: 20px;
+  --slider-width: calc((var(--slide-width) + var(--slide-margin-right)) * var(--number-of-slides));
+}
+
+.slider__container {
+  width: calc(var(--slider-width) / var(--slide-width) * 100%);
+  display: flex;
+  transition: ms ease;
+}
+
+.slide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 54px;
+  width: var(--slide-width-px);
+  margin-right: var(--slide-margin-right-px);
+}
+
+.small-heart {
+  width: 20px;
+  height: 20px;
+}
+
+.pets-in-zoo__btn {
+  width: 331px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 17px 0 20px;
+  background-color: #F6F9FA;
+  border: 2px solid #19707D;
+  border-radius: 100px;
+  transition: background-color 0.9s;
+}
+
+.pets-in-zoo__btn_text {
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #19707D;
+  transition: all 0.9s;
+}
+
+.pets-in-zoo__btn:hover {
+  color: #FFFFFF;
+  border: 2px solid #adb62b;
+  background-color: #adb62b;
+  transition: all 0.9s;
+}
+
+.small-heart path:first-child {
+  transition: fill 0.9s;
+}
+
+.pets-in-zoo__btn:hover path:first-child {
+  fill: #19707D;
+  transition: fill 0.9s;
+}
+
+.pets-in-zoo__btn:active {
+  border: 2px solid #19707D;
+  transition: all 0.9s;
+}
+
+.card {
+  position: relative;
+  width: 480px;
+  height: 364px;
+  background-color: white;
+  box-shadow: 0px 2px 30px rgb(0 0 0 / 6%);
+  border-radius: 10px;
+  margin: 0;
+}
+
+.card__link {
+  margin: 0 20px 20px 0;
+}
+
+.card__link:nth-child(3),
+.card__link:nth-child(6) {
+  margin-right: 0;
+}
+
+.card__pet {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  margin-left: 2px;
+  height: 273px;
+  border-bottom: 1px solid #E5EAEB;
+}
+
+.animal {
+  position: absolute;
+}
+
+.pet {
+  position: relative;
+  width: 229px;
+  height: 221px;
+  clip-path: url(#animation-clip);
+  transition: transform 4s;
+  background: #FFFFFF;
+  transform-origin: center;
+}
+
+.pet::before,
+.pet__panda::before {
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  left: -39px; 
+  right: 0; 
+  bottom: 0;
+  background: url(../../assets/images/pets-in-zoo-panda.png); 
+  background-size: cover;
+  opacity: 0.8;
+  transition: transform 4s, opacity 0.8s;
+}
+
+.pet__eagle::before {
+  top: -62px;
+  left: -149px;
+  background: url(../../assets/images/pets-in-zoo-eagle.png);
+}
+
+.pet__gorilla::before {
+  top: -17px;
+  left: -76px;
+  background: url(../../assets/images/pets-in-zoo-gorilla.png);
+}
+
+.pet__crocodile::before {
+  top: -25px;
+  left: -89px;
+  background: url(../../assets/images/pets-in-zoo-crocodile.png);
+}
+
+.pet__elephant::before {
+  top: -18px;
+  left: -78px;
+  background: url(../../assets/images/pets-in-zoo-elephant.png);
+}
+
+.pet__lemur::before {
+  top: 0px;
+  left: -34px;
+  background: url(../../assets/images/pets-in-zoo-lemur.png);
+}
+
+.card__link:hover .pet {
+  transform: rotate(360deg);
+}
+
+.card__link:hover .pet::before {
+  transform: rotate(-360deg);
+  opacity: 1;
+}
+
+.card__description {
+  margin: 17px 0px 0 30px;
+}
+
+.card__pet_name {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #2D2D2D;
+  margin: 0;
+}
+
+.card__text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #919191;
+  margin: 6px 0;
+}
+
+.card__small-tv {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 83%;
+  left: 87.1%;
+}
+
+.btn__arrow-right,
+.btn__arrow-left {
+  position: absolute;
+  transition: transform 0.8s;
+}
+
+.btn__arrow-right:hover,
+.btn__arrow-left:hover {
+  transform: scale(1.5);
+  transition: transform 0.8s;
+}
+
+.btn__arrow-right_pets-in-zoo {
+  top: 47.5%;
+  right: -5.7%;
+}
+
+.btn__arrow-left_pets-in-zoo {
+  top: 53.8%;
+  right: -5.65%;
+}
+
+.penguin {
+  position: absolute;
+  top: 87.9%;
+  right: -6.25%;
+}
+
+/* Section - Pay and feed */
+
+.pay-and-feed {
+  width: 100%;
+  height: 564px;
+  background-image: url(../../assets/images/pay-and-feed-background-1.svg), url(../../assets/images/pay-and-feed-background-2.svg);
+  background-position: center 34px, center 0px;
+  background-repeat: repeat no-repeat;
+}
+
+.pay-and-feed__container {
+  position: relative;
+  padding-top: 78px;
+}
+
+.pay-and-feed__tree {
+  position: absolute;
+  top: 22%;
+  left: -11.25%;
+}
+
+.pay-and-feed__bamboo {
+  position: absolute;
+  top: 36.8%;
+  right: -10.26%;
+}
+
+.pay-and-feed__pointer {
+  position: absolute;
+  top: 50%;
+  width: calc(300 / 1540 * 100%);
+  height: 52px;
+  background-image: url(../../assets/icons/pay-and-feed-arrows.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.pay-and-feed__pointer_first {
+  left: 25.15%;
+}
+
+.pay-and-feed__pointer_second {
+  left: 57.5%;
+}
+
+
+.title_color {
+  color: #C5E1E6;
+}
+
+.pay-and-feed__btn {
+  width: 356px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C5E1E6;
+  border-radius: 100px;
+  border: 0px solid transparent;
+  filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6));
+  transition: background-color 0.9s;
+}
+
+.btn_text {
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -1.1px;
+  text-transform: uppercase;
+  color: #0D444D;
+  transition: all 0.9s;
+}
+
+.pay-and-feed__btn:hover {
+  background-color: #adb62b;
+  transition: background-color 0.9s, border 0.3s;
+}
+
+.pay-and-feed__btn:active {
+  border: 3px solid #C5E1E6;
+  transition: border 0.3s;
+}
+
+.pay-and-feed__content {
+  width: calc(1275 / 1540 * 100%);
+  height: 179px;
+  display: flex;
+  justify-content: space-between;
+  margin: 63px 124px 0 124px;
+}
+
+.content__icon_hand-with-coin {
+  margin: 44px 0 0 38px;
+}
+
+.content__icon_hand-with-apple {
+  margin: 42px 0 0 42px;
+}
+
+.content__description_pay-and-feed {
+  left: -54%;
+  width: 218%;
+}
+
+.content__text_pay-and-feed {
+  color: #C5E1E6;
+}
+
+/* Section - Testimonials */
+
+.testimonials {
+  width: 100%;
+  height: 390px;
+}
+
+.testimonials__container {
+  margin-top: 88px;
+}
+
+.testimonials__btn {
+  width: 255px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 0 18px;
+  background-color: #F6F9FA;
+  border: 2px solid #19707D;
+  border-radius: 100px;
+  transition: background-color 0.9s;
+}
+
+.testimonials__btn_text {
+  font-family: "Roboto Mono";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #19707D;
+  transition: all 0.9s;
+}
+
+.testimonials__btn:hover {
+  color: #FFFFFF;
+  border: 2px solid #adb62b;
+  background-color: #adb62b;
+  transition: all 0.9s;
+}
+
+.icon-comments path {
+  transition: all 0.9s;
+}
+
+.testimonials__btn:hover path {
+  stroke: #FFFFFF;
+  fill: #19707D;
+  transition: all 0.9s;
+}
+
+.testimonials__btn:active {
+  border: 2px solid #19707D;
+  transition: all 0.9s;
+}
+
+.testimonials__slider {
+  width: var(--slide-width-px);
+  height: 298px;
+  overflow: hidden;
+}
+
+.comments {
+  width: calc(var(--slider-width) / var(--slide-width) * 100%);
+  padding-top: 230px;
+  display: flex;
+}
+
+.comments__item {
+  position: relative;
+  width: 480px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.comments__item:last-child {
+  margin-right: 0;
+}
+
+.comments__data {
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #B3B3B3;
+}
+
+.comments__text {
+  margin-top: 8px;
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2D2D2D;
+}
+
+.comments__avatar {
+  margin-left: 19px;
+}
+
+.comments__name {
+  margin: 0 0 1px 16px;
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.comment {
+  position: absolute;
+  bottom: 127%;
+  height: 172px;
+  padding: 29px 45px 29px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 30px rgb(0 0 0 / 6%);
+  border-radius: 10px;
+}
+
+.comment::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 14.2%;
+  border-width: 18px;
+  border-style: solid;
+  border-color: #FFFFFF transparent transparent transparent;
+}
+
+/* Section - Look at this beautiful animals */
+
+.looking-at-animals {
+  width: 100%;
+  height: 311px;
+}
+
+.looking-at-animals__container {
+  position: relative;
+  margin-top: 85px;
+}
+
+.animal__icons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 19%;
+  left: 0.45%;
+  width: calc(1345 / 1540 * 100%);
+}
+
+.animal__icon {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.animal__link {
+  position: relative;
+}
+
+.animal__frame {
+  width: 115px;
+  height: 102px;
+  background-image: url(../../assets/images/look-at-animals-frame.svg);
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.animal__image,
+.animal__image_panda,
+.animal__image_gorilla,
+.animal__image_eagle,
+.animal__image_crocodile,
+.animal__image_elephant,
+.animal__image_lemur {
+  width: 76px;
+  height: 74px;
+  background-image: url(../../assets/images/look-at-animals-panda.png);
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  left: -33px;  
+}
+
+.animal__image_gorilla {
+  background-image: url(../../assets/images/look-at-animals-gorilla.png);
+}
+
+.animal__image_eagle {
+  background-image: url(../../assets/images/look-at-animals-eagle.png);
+}
+
+.animal__image_crocodile {
+  background-image: url(../../assets/images/look-at-animals-crocodile.png);
+}
+
+.animal__image_elephant {
+  background-image: url(../../assets/images/look-at-animals-elephant.png);
+}
+
+.animal__image_lemur {
+  background-image: url(../../assets/images/look-at-animals-lemur.png);
+}
+
+.animal__link:hover .animal__frame {
+  opacity: 1;
+  animation: linear 8s infinite rotate;
+  transition: opacity 0.8s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animal__name {
+  font-family: "Roboto Mono";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #2D2D2D;
+}
+
+.btn__arrow-right_looking-at-animals {
+  top: 34%;
+  right: 6.15%;
+}
+
+.btn__arrow-left_looking-at-animals {
+  top: 50.7%;
+  right: 6.2%;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 201px;
+  background: #196469;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.footer__wrapper {
+  margin-top: 2px;
+}
+
+.info {
+  margin-top: 56px;
+}
+
+.info__text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 0 10px;
+}
+
+.footer__navbar {
+  margin-left: 77px;
+}
+
+/* Styles for pop-up */
+/* Basic styles */
+
+.pop-up {
+  position: fixed;
+  z-index: 100;
+  top: calc(50vh - 387px);
+  left: calc(50vw - 284px);
+  background-color: transparent;
+  max-width: 568px;
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.pop-up_hidden,
+.cover_hidden {
+  display: none;
+}
+
+.pop-up_hidden_opacity {
+  opacity: 0;
+}
+
+.pop-up__container {
+  max-width: 508px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Header pop-up */
+
+.pop-up__header {
+  width: 100%;
+  height: 125px;
+  background-color: #2A8086;
+  border-radius: 20px 20px 0 0;
+}
+
+.pop-up__container_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up__title {
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.pop-up__logo {
+  width: 78px;
+  height: 61px;
+  color: #C5E1E6;
+  transition: all 0.8s;
+}
+
+.pop-up__logo:hover {
+  color: #adb62b;
+  transition: all 0.8s;
+}
+
+/* Main pop-up */
+
+.pop-up__main {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 20px 20px;
+  background-color: #FFFFFF;
+}
+
+.pop-up__control-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.btn_style_create-account,
+.btn_style_log-in {
+  width: 224px;
+  height: 43px;
+  margin: 32px 0;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #C5E1E6;
+}
+
+.btn__text_style_create-account,
+.btn__text_style_log-in {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #0D444D;
+}
+
+.btn_active {
+  border-bottom: 2px solid #2A8086;
+}
+
+.btn_style_google-sign-in,
+.btn_style_facebook-sign-in,
+.btn_style_google-login,
+.btn_style_facebook-login {
+  width: 216px;
+  height: 54px;
+  margin-bottom: 32px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  transition: border 0.5s;
+}
+
+.btn_style_google-login,
+.btn_style_facebook-login {
+  display: none;
+}
+
+.btn_style_google-sign-in:hover,
+.btn_style_facebook-sign-in:hover,
+.btn_style_google-login:hover,
+.btn_style_facebook-login:hover {
+  border: 2px solid #adb62b;
+  transition: border 0.5s;
+}
+
+.btn__text_style_google-sign-in,
+.btn__text_style_facebook-sign-in,
+.btn__text_style_google-login,
+.btn__text_style_facebook-login {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2D2D2D;
+}
+
+.social-icon {
+  margin-right: 15px;
+}
+
+.pop-up__form {
+  width: 100%;
+  height: calc(410 / 649 * 100%);
+}
+
+.form__title {
+  margin: 0 0 8px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #0D444D;
+}
+
+.form__input_type_text,
+.form__input_type_email,
+.form__input_type_password {
+  width: 100%;
+  height: 54px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  transition: border 0.5s;
+}
+
+.form__input_type_password {
+  margin-bottom: 31px;
+}
+
+.form__input_type_text:hover,
+.form__input_type_email:hover,
+.form__input_type_password:hover {
+  border: 2px solid #adb62b;
+  transition: border 0.5s;
+}
+
+.form__input_type_text:focus,
+.form__input_type_email:focus,
+.form__input_type_password:focus {
+  border: 2px solid #adb62b;
+  transition: border 0.5s;
+}
+
+.form__input_type_checkbox {
+  position: absolute;
+	z-index: -1;
+  width: 22px;
+  height: 22px;
+	opacity: 0;
+	margin-top: -3px;
+}
+
+.form__input_type_checkbox + label {
+  position: relative;
+	padding: 3px 0 0 22px;
+	cursor: pointer;
+}
+
+.form__input_type_checkbox + label:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 22px;
+  height: 22px;
+  border: 2px solid #19707D;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border 0.5s;
+}
+
+.form__input_type_checkbox:hover + label:before {
+	border: 2px solid #adb62b;
+  transition: border 0.5s;
+}
+
+.form__input_type_checkbox:checked + label:before {
+	content: "✓";
+  color: #19707D;
+	font-size: 30px;
+	font-weight: 900;
+}
+
+.form__text {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2D2D2D;
+}
+
+.form__text_checkbox {
+  margin-left: 22px;
+}
+
+.form__btn {
+  width: 100%;
+  height: 54px;
+  margin-top: 32px;
+  margin-bottom: 46px;
+  background: #2A8088;
+  box-shadow: 0px 2px 20px rgba(185, 213, 217, 0.6);
+  border-radius: 100px;
+}
+
+.btn__text_style_send {
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #C5E1E6;
+}
+
+.form__link {
+  color: #2D2D2D;
+  border-bottom: 1px solid #2D2D2D;
+}
+
+.cover {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.hidden-scroll {
+  overflow: hidden;
+}
+
+
+/* 1920px > Media > 1610px */
+@media (max-width: 1919px) {
+  .navbar {
+    min-width: 474px;
+  }
+
+  .search__input {
+    width: 200px;
+    margin-left: 30px;
+  }
+
+  .how-it-works__bamboo-first {
+    left: 0%;
+  }
+
+  .how-it-works__tree-first {
+    left: 33%;
+  }
+
+  .pay-and-feed {
+    overflow: hidden;
+  }
+
+  .pay-and-feed__tree {
+    top: 45%;
+    left: -3.75%;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    right: -3.55%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    right: -3.45%;
+  }
+
+  .penguin {
+    top: 99.1%;
+    right: 0.75%;
+  }  
+}
+
+/* 1610px >= Media > 1440px */
+@media (max-width: 1610px) {
+  .card {
+    width: 433px;
+  }
+
+  .how-it-works__tree-three {
+    display: none;
+  }
+
+  :root {
+    --slide-width: 1340;
+    --slide-width-px: 1340px;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    right: -3.55%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    right: -3.45%;
+  }
+
+  .penguin {
+    right: 0.75%;
+  }
+
+}
+
+/* 1440px >= Media > 1390px */
+@media (max-width: 1440px) {
+  :root {
+    --slide-width: 1285;
+    --slide-width-px: 1285px;
+  }
+  
+  .card {
+    width: 415px;
+  }
+
+  .pay-and-feed__pointer {
+    background-size: 88% auto;  
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 27.15%;
+  }
+
+  .pay-and-feed__pointer_second {
+    left: 58.5%;
+  }
+}
+
+/* 1390px > Media > 1320px */
+@media (max-width: 1390px) {
+  .pets-in-zoo {
+    height: 810px;
+  }
+
+  :root {
+    --slide-width: 1185;
+    --slide-width-px: 1185px;
+    --slide-margin-right: 30;
+    --slide-margin-right-px: 30px;    
+  }
+
+  .card__link {
+    margin: 0 30px 30px 0;
+  }
+
+  .card {
+    width: 375px;
+    height: 273px;
+  }
+
+  .card__pet {
+    padding-top: 25px;
+    height: 201px;
+    margin-left: -3px;
+  }
+
+  .pet {
+    clip-path: path("M142.873 31.9215C156.388 50.1538 160.142 75.0047 153.134 94.1112C146.126 113.218 128.606 126.705 108.459 137.194C88.4357 147.684 65.785 155.302 46.513 148.683C27.2411 142.19 11.2229 121.709 4.34002 97.4829C-2.41767 73.2564 -0.0399708 45.2835 14.4766 26.9263C29.1182 8.44423 55.7736 -0.547054 80.9272 0.826614C105.956 2.20028 129.357 13.814 142.873 31.9215Z");
+    width: 157px;
+    height: 151px;
+  }
+
+  .pet::before,
+  .pet__panda::before {
+    left: -27px;
+  }
+
+  .pet__eagle::before {
+    top: -42px;
+    left: -101px;
+    background-size: 359px auto;
+  }
+
+  .pet__gorilla::before {
+    top: -11px;
+    left: -51px;
+    background-size: 258px auto;
+  }
+
+  .pet__crocodile::before {
+    top: -16px;
+    left: -60px;
+    background-size: 277px auto;
+  }
+
+  .pet__elephant::before {
+    top: -11px;
+    left: -52px;
+    background-size: 261px auto;
+  }
+
+  .pet__lemur::before {
+    top: 1px;
+    left: -23px;
+    background-size: 201px auto;
+  }
+
+  .card__description {
+    margin: 14px 0px 0 19px;
+  }
+
+  .card__pet_name {
+    font-size: 17.2414px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+  }
+
+  .card__text {
+    font-size: 13.41px;
+    line-height: 16px;
+    letter-spacing: -0.3px;
+  }
+
+  .card__small-tv {
+    width: 22px;
+    height: 22px;
+    top: 82.8%;
+    left: 87.1%;
+  }
+}
+
+/* 1320px >= Media > 1200px */
+@media (max-width: 1320px) {
+  :root {
+    --slide-width: 1109;
+    --slide-width-px: 1109px;
+    --slide-margin-right: 30;
+    --slide-margin-right-px: 30px;    
+  }
+
+  .card {
+    width: 349px;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    right: -4.7%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    right: -4.65%;
+  }
+
+  .pay-and-feed__pointer {
+    background-size: 86% auto;  
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 29.15%;
+  }
+
+  .pay-and-feed__pointer_second {
+    left: 59.5%;
+  }
+}
+
+/* 1200px >= Media > 1180px */
+@media (max-width: 1200px) {
+  .header {
+    height: 122px;
+  }
+
+  .logo__link {
+    margin: 1px 0 0 2px;
+  }
+
+  .search__btn {
+    margin-top: 1px;
+  }
+
+  .btn__text_log-in, 
+  .btn__text_sign-up {
+    visibility: hidden;
+  }
+
+  .btn_combined {
+    min-width: 56px;
+    min-height: 56px;
+    margin: 0 0 2px 31px;
+    margin-left: 31px;
+    background-image: url(../../assets/icons/log-in\(1200\ desktop\).svg);
+    background-repeat: no-repeat;
+    transition: background-image 0.8s
+  }
+
+  .btn_combined:hover {
+    background-image: url(../../assets/icons/log-in.hover\(1200\ desktop\).svg);
+    transition: background-image 0.8s;
+  }
+
+  .btn_sign-up {
+    display: none;
+  }
+
+  .watch-favorite-animals {
+    height: 648px;
+    background-image: url(../../assets/images/watch-favorite-animal-background-1\ \(1200\ desktop\).svg),
+                      url(../../assets/images/watch-favorite-animal-background-2\ \(1200\ desktop\).svg);
+  }
+
+  .content {
+    width: 767px;
+    margin-top: 107px;
+  }
+
+  .watch-favorite-animals__title {
+    font-size: 64px;
+    line-height: 57px;
+    letter-spacing: -0.2px;
+  }
+
+  .watch-favorite-animals__title_mod {
+    font-size: 48px;
+    letter-spacing: 0;
+  }
+
+  .watch-favorite-animals__text {
+    margin: 31px 103px 0 0;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .watch-favorite-animals__btn {
+    margin: 37px 0 0;
+  }
+
+  .visual-content {
+    height: 541px;
+    margin-top: 32px;
+  }
+
+  .panda {
+    height: 492px;
+    width: 740px;
+  }
+
+  .youtube {
+    top: 40.1%;
+    left: 46.5%;
+  }
+
+  .how-it-works {
+    height: 739px;
+    background-position: 0% 100%, 0% 79.5%, 0% 89%;
+  }
+
+  .how-it-works__title {
+    top: -8.9%;
+    left: 2.4%;
+  }
+
+  .how-it-works__content {
+    width: calc(1344 / 1540 * 100%);
+    margin: 33px 70px 0;
+  }
+
+  .content__description {
+    left: -48%;
+  }
+
+  .content__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tooltip__text {
+    display: none;
+  }
+
+  .how-it-works__bamboo-first {
+    top: 37.5%;
+    left: 0.1%;
+  }
+
+  .how-it-works__tree-first {
+    top: 37.9%;
+    left: 21.6%;
+  }
+
+  .how-it-works__tree-two {
+    top: 46%;
+    left: 50.8%;
+  }
+
+  .how-it-works__panda {
+    top: 63.8%;
+    left: 76.2%;
+  }
+
+  .how-it-works__bamboo-two {
+    top: 48.3%;
+    left: 83.6%;
+  }
+
+  .pets-in-zoo {
+    height: 780px;
+  }
+
+  .pets-in-zoo__container {
+    margin-top: 33px;
+  }
+
+  .pets-in-zoo__btn {
+    width: 303px;
+    height: 40px;
+  }
+
+  .pets-in-zoo__btn_text {
+    font-size: 16px;
+    letter-spacing: 1.2px;
+  }
+
+  :root {
+    --slide-width: 1076;
+    --slide-width-px: 1076px;
+    --slide-margin-right: 33;
+    --slide-margin-right-px: 33px;
+  }
+
+  .slide {
+    margin-top: 38px;
+  }
+
+  .card__link {
+    margin: 0 33px 31px 0;
+  }
+
+  .card {
+    width: 336px;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    top: 43.6%;
+    right: -4.4%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    top: 51.7%;
+    right: -4.25%;
+  }
+
+  .penguin {
+    top: 83.8%;
+    right: -5.1%;
+  }
+
+  .pay-and-feed {
+    background-image: url(../../assets/images/pay-and-feed-background-1\ \(1200\ desktop\).svg),
+                      url(../../assets/images/pay-and-feed-background-2\ \(1200\ desktop\).svg);
+  }
+
+  .pay-and-feed__container {
+    padding-top: 88px;
+  }
+
+  .pay-and-feed__btn {
+    width: 288px;
+    height: 40px;
+    padding: 0px 36px 0 48px;
+  }
+
+  .btn_text {
+    letter-spacing: -1.15px;
+  }
+
+  .pay-and-feed__content {
+    width: calc(1349 / 1540 * 100%);
+    margin: 38px 69px 0 69px;
+  }
+
+  .pay-and-feed__pointer {
+    top: 48.2%;
+    width: calc(204 / 1200 * 100%);
+    background-image: url(../../assets/icons/pay-and-feed-arrows\ \(1200\ desktop\).svg);
+    background-size: 100% auto;
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 25.7%;
+  }
+
+  .pay-and-feed__pointer_second {
+    left: 58.25%;
+  }
+
+  .content__description_pay-and-feed {
+    left: -58%;
+  }
+
+  .pay-and-feed__tree {
+    top: 51.2%;
+    width: 102px;
+    height: 181px;
+  }
+
+  .pay-and-feed__bamboo {
+    display: none;
+  }
+
+  .testimonials {
+    height: 370px;
+  }
+
+  .testimonials__container {
+    margin-top: 38px;
+  }
+
+  .content-top {
+    margin-left: -2px;
+  }
+
+  .testimonials__btn {
+    width: 236px;
+    height: 40px;
+    padding: 0 17px 1px 18px;
+  }
+
+  .testimonials__btn_text {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 1.2px;
+  }
+
+  .comments {
+    margin: -22px 0 0 2px;
+  }
+
+  .comments__item {
+    margin-right: 17px;
+    width: 368px;
+  }
+
+  .comment {
+    padding: 29px 99px 29px 45px;
+  }
+
+  :root {
+      --slide-width-px: 1139px;
+  }
+
+  .looking-at-animals {
+    height: 241px;
+  }
+
+  .looking-at-animals__container {
+    margin: 33px 0 0 -2px;
+  }
+
+  .animal__icons {
+    top: 17%;
+    left: 1.7%;
+  }
+
+  .animal__icon {
+    margin-right: 10px;
+  }
+
+  .animal__icon_hidden:nth-child(n + 7) {
+    display: none;
+  }
+
+  .btn__arrow-right_looking-at-animals {
+    top: 37.15%;
+    right: 4%;
+  }
+
+  .btn__arrow-left_looking-at-animals {
+    top: 58.75%;
+    right: 4.1%;
+  }
+
+  .footer {
+    height: 121px;
+  }
+
+  .footer__wrapper {
+    margin: 0 0 0 -2px;
+  }
+
+  .footer__navbar {
+    margin-left: 79px;
+    min-width: 476px;
+  }
+
+  .info {
+    margin: 5px 1px 0 0;
+  }
+
+  .info__text {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 0 8px;
+  }  
+}
+
+/* 1180px >= Media > 1152px */
+@media (max-width: 1180px) {
+  .content-middle {
+    width: 969px;
+  }
+
+  .card {
+    width: 290px;
+  }
+
+  .card__small-tv {
+    top: 6.8%;
+  }
+}
+
+/* 1152px >= Media > 1024px */
+@media (max-width: 1152px) {
+  .navbar {
+    min-width: 380px;
+  }
+
+  .content {
+    margin-top: 65px;
+  }
+
+  .pay-and-feed__container {
+    padding-top: 123px;
+  }
+
+  .pay-and-feed__content {
+    margin: 3px 69px 0 69px;
+  }
+
+  .footer__navbar {
+    margin-left: 53px;
+  }
+
+  .pay-and-feed__pointer {
+    background-size: 90% auto;
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 28.7%;
+  }
+
+  .pay-and-feed__pointer_second {
+    left: 59.25%;
+  }
+}
+
+/* 1024px >= Media > 960px */
+@media (max-width: 1024px) {
+  .pets-in-zoo__btn {
+    width: 295px;
+  }
+
+  .content-middle {
+    width: 830px;
+  }
+
+  .card {
+    width: 382px;
+  }
+
+  .card__link_hidden {
+    display: none;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    top: 41.2%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    top: 49.7%;
+  }
+
+  .pay-and-feed__pointer {
+    top: 45%;
+    background-image: url(../../assets/icons/pay-and-feed-arrows\ \(640\ tablet\).svg);
+    width: calc(52 / 650 * 100%);
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 32%;
+  }
+
+  .pay-and-feed__pointer_second {
+    left: 62%;
+  }
+
+  .pay-and-feed__btn {
+    width: 253px;
+    padding: 0 20px;
+  }
+}
+
+/* 960px >= Media > 880px */
+@media (max-width: 960px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .pay-and-feed__container {
+    padding-top: 123px;
+  }
+
+  .content {
+    margin-top: 40px;
+  }
+
+  .pay-and-feed {
+    background-position: 90% 100%, 89% 0%;
+  }
+
+  .navbar,
+  .search__input,
+  .search__btn {    
+    display: none;
+  }
+
+  .btn_combined {
+    min-width: 35px;
+    min-height: 35px;
+    margin-left: 31px;
+    background-image: url(../../assets/icons/burger-menu\ \(640\ tablet\).svg);
+    transition: transform 0.8s, background-image 0.8s;
+  }
+
+  .btn_combined:hover {
+    background-image: url(../../assets/icons/burger-menu.hover\ \(640\ tablet\).svg);
+    transform: scale(1.3);
+    transition: transform 0.8s, background-image 0.8s;
+  }
+
+  .content__description {
+    left: -26%;
+    width: 156%;
+  }
+
+  .content__description_pay-and-feed {
+    left: -25%;
+    width: 150%;
+  }
+
+  .how-it-works__bamboo-first,
+  .how-it-works__tree-first,
+  .how-it-works__bamboo-two,
+  .how-it-works__panda {
+    width: 120px;
+  }
+
+  .how-it-works__second-tree {
+    width: 100px;
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 33%;
+  }
+
+  .comment {
+    padding: 25px;
+  }
+}
+
+/* 880px >= Media > 800px */
+@media (max-width: 880px) {
+  .content-middle {
+    width: 725px;
+  }
+
+  .card {
+    width: 329px;
+  }
+
+  .pay-and-feed {
+    background-position: 70% 100%, 69% 0%;
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 36%;
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 34%;
+  }
+}
+
+/* 800px >= Media > 640px */
+@media (max-width: 800px) {
+  .content-middle {
+    width: 725px;
+  }
+
+  .watch-favorite-animals__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .watch-favorite-animals__title_mod {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .watch-favorite-animals__btn {
+    width: 170px;
+    height: 37px;
+  }
+
+  .watch-favorite-animals__btn_text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .how-it-works__title {
+    top: -14.9%;
+  }
+
+  .how-it-works__content {
+    margin: 33px 39px 0;
+  }
+
+  .how-it-works__panda {
+    left: 38.2%;
+  }
+
+  .how-it-works__bamboo-two {
+    left: 66.6%;
+  }
+
+  .content {
+    margin-top: 95px;
+  }
+
+  .content__circle {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    margin: 0;
+  }
+
+  .content__icon {
+    width: 54px;
+    height: 54px;
+    margin: 35px 0 0 35px;
+  }
+
+  .content-middle {
+    width: 552px;
+  }
+
+  .card {
+    width: 256px;
+    height: 298px;
+    margin: 0 20px 20px 0;
+  }
+
+  .card__pet {
+    height: 220px;
+    padding-top: 28px;
+    margin-left: 0;
+  }
+
+  .pet {
+    clip-path: path("M154.925 34.0403C169.656 53.9122 173.748 80.9979 166.109 101.823C158.471 122.647 139.376 137.347 117.416 148.78C95.5924 160.213 70.9047 168.516 49.8997 161.302C28.8947 154.225 11.4359 131.903 3.93415 105.498C-3.43125 79.0924 -0.839725 48.6039 14.9822 28.5959C30.9406 8.45175 59.993 -1.3481 87.4087 0.149096C114.688 1.6463 140.194 14.3044 154.925 34.0403Z");
+    width: 170px;
+    height: 164px;
+  }
+
+  .card__small-tv {
+    width: 24px;
+    height: 24px;
+    top: 5.5%;
+    left: 83.1%;
+  }
+
+  .card__description {
+    margin: 8px 0px 0 21px;
+  }
+
+  .card__pet_name {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0;
+  }
+
+  .card__text {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.04px;
+    margin: 9px 0;
+  }
+
+  .pet::before,
+  .pet__panda::before {
+    left: -29px;
+  }
+
+  .pet__eagle::before {
+    top: -45px;
+    left: -108px;
+    background-size: 386px auto;
+  }
+
+  .pet__crocodile::before {
+    top: -18px;
+    left: -66px;
+    background-size: 301px auto;
+  }
+
+  .pet__elephant::before {
+    top: -13px;
+    left: -58px;
+    background-size: 285px auto;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    top: 42.2%;
+    right: -5.3%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    right: -5.15%;
+  }
+
+  .penguin {
+    top: 77.8%;
+    right: -9%;
+    width: 59px;
+    height: 120px;
+  }
+
+  .pay-and-feed__tree {
+    display: none;
+  }
+
+  .pay-and-feed {
+    background-position: 27% 100%, 26% 0%;
+  }
+
+  .pay-and-feed__pointer {
+    top: 42%;
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 35%;
+  }
+
+  .pay-and-feed__pointer_second {
+    left: 66%;
+  }
+
+  .comments__item_hidden {
+    display: none;
+  }
+
+  .animal__icon_hidden:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+/* 640px >= Media > 610px */
+@media (max-width: 640px) {
+  .header {
+    height: 78px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .logo {
+    width: 49px;
+    height: 38px;
+  }
+
+  .logo__link {
+    margin: 3px 0 0;
+  }
+
+  .btn_combined {
+    margin: 0 8px 1px 0;
+  }
+
+  .btn__text_log-in, 
+  .btn__text_sign-up {
+    display: none;
+  }
+
+  .watch-favorite-animals {
+    height: 402px;
+    background-image: url(../../assets/images/watch-favorite-animal-background-1\ \(640\ tablet\).svg),
+                      url(../../assets/images/watch-favorite-animal-background-2\ \(640\ tablet\).svg);
+  }
+
+  .content {
+    margin-top: 33px;
+  }
+
+  .watch-favorite-animals__text {
+    margin: 21px 63px 0 0;
+  }
+
+  .watch-favorite-animals__btn {
+    margin: 30px 0 0;
+  }
+
+  .btn-donate {
+    display: inline-block;
+    position: absolute;
+    left: 206px;
+    width: 174px;
+    letter-spacing: 2px;
+    background: #C5E1E6;
+  }
+
+  .visual-content {
+    height: 214px;
+    margin: 31px 1px 0 0;
+  }
+
+  .panda {
+    height: 215px;
+    width: 569px;
+  }
+
+  .youtube {
+    top: 19.1%;
+    left: 31.5%;
+    width: calc(285 / 853 * 100%);
+    height: 109px;
+  }
+
+  .how-it-works {
+    height: 483px;
+    background-image: url(../../assets/images/how-it-works-background-1\ \(640\ tablet\).svg),
+                      url(../../assets/images/how-it-works-background-2\ \(640\ tablet\).svg),
+                      url(../../assets/images/how-it-works-background-3\ \(640\ tablet\).svg);
+    background-position: 0% 86%, 0% 99.8%, 0% 93%;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0;
+  }
+
+  .how-it-works__content {
+    margin: 23px 35px 0;
+    width: calc(1352 / 1540 * 100%);
+  }
+
+  .how-it-works__title {
+    top: -10.3%;
+    left: 3.1%;
+  }
+
+  .content__circle {
+    width: 113px;
+    height: 113px;
+  }
+
+  .content__icon {
+    width: 42px;
+    height: 42px;
+    margin: 36px 0 0 36px;
+  }
+
+  .content__description {
+    left: -30%;
+    width: 162%;
+  }
+
+  .content__text {
+    margin: 8px 0;
+  }
+
+  .how-it-works__bamboo-first {
+    display: none;
+  }
+
+  .how-it-works__tree-first {
+    width: 58px;
+    height: 88px;
+    top: 54%;
+    left: 34.5%;
+  }
+
+  .how-it-works__tree-two {
+    width: 73px;
+    height: 129px;
+    top: 46.9%;
+    left: 4.7%;
+  }
+
+  .how-it-works__panda {
+    width: 95px;
+    height: 86px;
+    top: 69.1%;
+    left: 61.5%;
+  }
+
+  .how-it-works__bamboo-two {
+    width: 82px;
+    height: 156px;
+    top: 56.1%;
+    left: 69.35%;
+  }
+
+  .pets-in-zoo {
+    height: 717px;
+  }
+
+  .pets-in-zoo__container {
+    margin-top: 30px;
+  }
+
+  .content-top {
+    margin-left: 0;
+  }
+
+  .content-middle {
+    width: 552px;
+    margin: 20px 0px 0 10px;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    top: 43.5%;
+    right: -2.7%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    top: 51.7%;
+    right: -2.45%;
+  }
+
+  .penguin {
+    top: 85.8%;
+    right: -4.1%;
+    width: 33px;
+    height: 66px;
+  }
+
+  .pets-in-zoo__btn {
+    width: 269px;
+    height: 37px;
+    padding: 0 18px 0px 17px;
+    border: 2px solid #19707D;
+  }
+
+  .pets-in-zoo__btn_text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.9px;
+  }
+
+  .small-heart {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pay-and-feed {
+    height: 367px;
+    background-image: url(../../assets/images/pay-and-feed-background-1\ \(640\ tablet\).svg),
+                      url(../../assets/images/pay-and-feed-background-2\ \(640\ tablet\).svg),
+                      url(../../assets/images/pay-and-feed-background-3\ \(640\ tablet\).svg);
+    background-position: 0% 73%, 0% 55%, 0% 80%;
+  }
+
+  .pay-and-feed__container {
+    padding-top: 52px;
+  }
+
+  .title_pay-and-feed {
+    margin: 0 0px 1px 15px;
+  }
+
+  .pay-and-feed__btn {
+    width: 256px;
+    letter-spacing: -0.19px;
+  }
+
+  .btn_text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .pay-and-feed__content {
+    margin: 39px 38px 0;
+    width: calc(1351 / 1540 * 100%);
+  }
+
+  .content__description_pay-and-feed {
+    left: -32%;
+  }
+
+  .pay-and-feed__pointer {
+    top: 45%;
+    width: calc(56 / 650 * 100%);
+  }
+
+  .pay-and-feed__pointer_first {
+    left: 29.95%;
+  }
+
+  .pay-and-feed__pointer_second {
+    left: 63.7%;
+  }
+
+  .testimonials {
+    height: 280px;
+  }
+
+  .title_testimonials {
+    letter-spacing: -0.5px;
+  }
+
+  .testimonials__container {
+    margin-top: 50px;
+  }
+
+  .testimonials__btn {
+    width: 211px;
+    height: 37px;
+    padding: 0 17px;
+  }
+
+  .testimonials__btn_text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.9px;
+  }
+
+  .icon-comments {
+    width: 21px;
+    height: 19px;
+  }
+
+  .comments {
+    margin: 170px 52px 0 0;
+  }
+
+  .comment {
+    height: 132px;
+    padding: 20px 15px;
+  }
+
+  .comment::after {
+    left: 13.2%;
+    border-width: 12px;
+  }
+
+  .comments__item {
+    width: 256px;
+  }
+
+  .comments__data {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .comments__text {
+    margin: 12px 0 0 -1px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .comments__avatar {
+    margin-top: 7px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .comments__name {
+    margin: 5px 0 0 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .looking-at-animals {
+    height: 202px;
+  }
+
+  .looking-at-animals__container {
+    margin: 25px 0 0 -2px;
+  }
+
+  .animal__icons {
+    top: 13%;
+    left: -1.1%;
+  }
+
+  .animal__icon {
+    margin-right: 5px;
+  }
+
+  .btn__arrow-right_looking-at-animals {
+    right: 4.2%;
+  }
+
+  .btn__arrow-left_looking-at-animals {
+    top: 62.75%;
+    right: 4.3%;
+  }
+
+  .footer {
+    height: 77px;
+  }
+
+  .footer__wrapper {
+    margin: 5px 0 0 0px;
+  }
+
+  .info {
+    margin: 9px -6px 0 0;
+  }
+
+  .info__text {
+    font-size: 10px;
+    line-height: 12px;
+    margin: 0 0 4px;
+  }
+}
+
+/* 610px >= Media > 410px */
+@media (max-width: 610px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .watch-favorite-animals {
+    height: 531px;
+    background-image: url(../../assets/images/watch-favorite-animal-background-1\ \(320\ mobile\).svg),
+                      url(../../assets/images/watch-favorite-animal-background-2\ \(320\ mobile\).svg);
+  }
+
+  .watch-favorite-animals__container {
+    position: relative;
+    justify-content: center;
+  }
+
+  .content {
+    width: 426px;
+    text-align: center;
+    padding-top: 256px;
+    margin: 3px 0 0 0;
+  }
+
+  .watch-favorite-animals__text {
+    margin: 21px 0px 0 0;
+  }
+
+  .watch-favorite-animals__btn {
+    position: unset;
+    left: 0;
+    width: 170px;
+    margin: 30px 6px 0;
+  }
+
+  .visual-content {
+    position: absolute;
+    top: -2%;
+    left: 4%;
+  }
+
+  .panda {
+    width: 570px;
+  }
+
+  .how-it-works {
+    height: 912px;
+    background-position: 0% 93%, 0% 99.8%, 0% 96%;
+  }
+
+  .how-it-works__container {
+    margin-top: 55px;
+  }
+
+  .how-it-works__title {
+    top: -2.4%;
+    left: 1.7%;
+  }
+
+  .how-it-works__content {
+    display: block;
+    margin: 0px auto;
+    width: calc(113 / 610 * 100%);
+  }
+
+  .content__circle {
+    margin: 18px auto 85px auto;
+  }
+
+  .content__icon {
+    margin: 36px 0 0 34px;
+  }
+
+  .content__description {
+    left: -33%;
+    width: 168%;
+  }
+
+  .how-it-works__tree-first {
+    top: 75.7%;
+    left: 22%;
+  }
+
+  .how-it-works__tree-two {
+    display: none;
+  }
+
+  .how-it-works__panda {
+    top: 83.7%;
+    left: 50.3%;
+  }
+
+  .how-it-works__bamboo-two {
+    top: 76.7%;
+    left: 58.5%;
+  }
+
+  .pets-in-zoo {
+    height: 804px;
+  }
+
+  .pets-in-zoo__container {
+    margin-top: 14px;
+    position: relative;
+  }
+
+  .content-middle {
+    width: calc(479 / 610 * 100%);
+    margin: 19px 42px 0;
+    justify-content: center;
+    height: 644px;
+    overflow: hidden;
+  }
+
+  .card {
+    width: 240px;
+    height: 312px;
+    margin: 0 0 20px 0;
+  }
+
+  .card__link:nth-child(n + 3) {
+    display: none;
+  }
+
+  .card__pet {
+    height: 228px;
+    padding-top: 49px;
+    margin-left: 0;
+  }
+
+  .pet {
+    clip-path: path("M139.92 30.6944C153.164 48.56 156.843 72.9112 149.976 91.6334C143.109 110.356 125.941 123.571 106.198 133.85C86.5782 144.129 64.3829 151.594 45.4985 145.108C26.6142 138.745 10.9181 118.677 4.17368 94.9373C-2.44811 71.198 -0.118227 43.7877 14.1064 25.7997C28.4536 7.68928 54.5728 -1.12118 79.2206 0.224864C103.746 1.57091 126.677 12.9511 139.92 30.6944Z");
+    width: 152px;
+    height: 147px;
+  }
+
+  .card__description {
+    margin: 12px 0px 0 17px;
+  }
+
+  .card__pet_name {
+    font-size: 17.5px;
+    line-height: 20px;
+  }
+
+  .card__text {
+    font-size: 13.1px;
+    line-height: 15px;
+    margin: 11px 0;
+  }
+
+  .card__small-tv {
+    width: 26px;
+    height: 27px;
+    left: 80.1%;
+  }
+
+  .pet::before, .pet__panda::before {
+    left: -26px;
+  }
+
+  .pet__eagle::before {
+    top: -42px;
+    left: -101px;
+    background-size: 351px auto;
+  }
+
+  .pet__gorilla::before {
+    top: -11px;
+    left: -51px;
+    background-size: 253px auto;
+  }
+
+  .pet__crocodile::before {
+    top: -16px;
+    left: -60px;
+    background-size: 271px auto;
+  }
+
+  .pet__elephant::before {
+    top: -11px;
+    left: -52px;
+    background-size: 256px auto;
+  }
+
+  .pet__lemur::before {
+    top: 1px;
+    left: -23px;
+    background-size: 197px auto;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    top: 42.7%;
+    right: 1.5%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    top: 50.7%;
+    right: 1.7%;
+  }
+
+  .penguin {
+    display: none;
+  }
+
+  .pay-and-feed {
+    height: 904px;
+    background-image: url(../../assets/images/pay-and-feed-background-1\ \(320\ mobile\).svg),
+                      url(../../assets/images/pay-and-feed-background-2\ \(320\ mobile\).svg),
+                      url(../../assets/images/pay-and-feed-background-3\ \(320\ mobile\).svg);
+    background-position: 73% 0%, 79% 55%, 85% 100%;
+  }
+
+  .pay-and-feed__container {
+    position: relative;
+    margin-top: 83px;
+  }
+
+  .pay-and-feed__btn {
+    position: absolute;
+    top: 76.3%;
+    right: 23.9%;
+    width: calc(300 / 610 * 100%);
+  }
+
+  .pay-and-feed__content {
+    width: calc(141 / 613 * 100%);
+    margin: 0 auto;
+    display: block;
+  }
+
+  .content__circle_pay-and-feed {
+    margin: -12px auto 134px auto;
+  }
+
+  .content__description_pay-and-feed {
+    left: -36%;
+  }
+
+  .pay-and-feed__pointer_first {
+    top: 20.1%;
+    left: 43.5%;
+    transform: rotate(90deg);
+  }
+
+  .pay-and-feed__pointer_second {
+    top: 46.5%;
+    left: 43.5%;
+    transform: rotate(90deg);
+  }
+
+  .testimonials {
+    height: 762px;
+  }
+
+  .testimonials__container {
+    position: relative;
+    margin-top: 34px;
+  }
+
+  .testimonials__btn {
+    width: 244px;
+    height: 40px;
+    padding: 0 26px 0 26px;
+  }
+
+  .comments {
+    margin: 172px 105px 0 22px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .comments__item {
+    width: 300px;
+    margin-bottom: 168px;
+  }
+
+  .comment {
+    padding: 18px 13px 18px 15px;
+  }
+
+  .comments__text {
+    margin: 12px 0 0 -1px;
+  }
+
+  .comments__avatar {
+    margin-top: 6px;
+  }
+
+  .comments__name {
+    margin: 4px 0 0 10px;
+  }
+
+  .comments__item:last-child {
+    display: flex;
+    margin-right: 17px;
+  }
+
+  .looking-at-animals {
+    height: 406px;
+  }
+
+  .looking-at-animals__container {
+    margin: 9px 0 0 0;
+  }
+
+  .animal__icons {
+    top: 6.2%;
+    left: 23.4%;
+    width: calc(323 / 571 * 100%);
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: flex-start;
+    height: 294px;
+    overflow: hidden;
+  }
+
+  .animal__icon {
+    margin-bottom: 20px;
+    margin-right: -10px;
+  }
+
+  .animal__icon_hidden:nth-child(n + 5) {
+    display: block;
+  }
+
+  .animal__icon:nth-child(n + 4) {
+    margin-right: -6px;
+  }
+
+  .btn__arrow-right_looking-at-animals {
+    top: 87.5%;
+    right: 48.6%;
+    transform: rotate(90deg);
+  }
+
+  .btn__arrow-left_looking-at-animals {
+    display: none;
+  }
+}
+
+/* 410px >= Media >= 320px */
+@media (max-width: 410px) {
+  .header {
+    height: 50px;
+  }
+
+  .logo__link {
+    margin: 6px 0 0 5px;
+  }
+
+  .btn_combined {
+    margin: 0 12px 0px 0;
+  }
+
+  .btn_combined:hover {
+    transform: scale(1.1);
+  }
+
+  .visual-content {
+    left: 1%;
+  }
+
+  .panda {
+    height: 211px;
+  }
+
+  .youtube {
+    top: 23.5%;
+    height: 84px;
+  }
+
+  .content {
+    padding-top: 247px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .watch-favorite-animals__title {
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: 0;
+  }
+
+  .watch-favorite-animals__text {
+    margin: 19px 4px 0 1px;
+  }
+
+  .watch-favorite-animals__title_mod {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .watch-favorite-animals__btn {
+    width: 139px;
+    margin: 15px 1px 0;
+    height: 40px;
+  }
+
+  .btn-donate {
+    margin: 0 0 0 16px;
+  }
+
+  .how-it-works__title {
+    top: -4.4%;
+    left: 3.1%;
+  }
+
+  .content__circle {
+    margin: 73px auto 103px -30px;
+  }
+
+  .how-it-works {
+    height: 896px;
+    background-position: 73% 94.8%, 73% 99.7%, 73% 97.2%;
+  }
+
+  .how-it-works__tree-first {
+      top: 75%;
+      left: -3.95%;
+  }
+
+  .how-it-works__panda {
+    top: 83.2%;
+    left: 50%;
+  }
+
+  .how-it-works__bamboo-two {
+    top: 76.1%;
+    left: 65.5%;
+  }
+
+  .pets-in-zoo__container {
+    margin-top: 10px;
+  }
+
+  .pets-in-zoo__btn {
+    position: absolute;
+    top: 91.8%;
+    left: 8%;
+  }
+
+  .content-middle {
+    width: calc(575 / 610 * 100%);
+    padding: 0px 43px 0 0px;
+    margin: 19px 0 0 15px;
+  }
+
+  .card__pet {
+    padding-top: 51px;
+  }
+
+  .card__description {
+    margin: 14px 0px 0 17px;
+  }
+
+  .card__small-tv {
+    top: 6%;
+  }
+
+  .btn__arrow-right_pets-in-zoo {
+    top: 43%;
+    right: 2.9%;
+  }
+
+  .btn__arrow-left_pets-in-zoo {
+    top: 51.1%;
+    right: 3%;
+  }
+
+  .pay-and-feed {
+    height: 906px;  
+    background-position: 73% 0.3%, 79% 44%, 85% 100%;
+  }
+
+  .pay-and-feed__container {
+    margin-top: 52px;
+  }
+
+  .pay-and-feed__content {
+    margin: -51px auto;
+  }
+
+  .title_pay-and-feed {
+    margin: 0;
+  }
+
+  .content__circle_pay-and-feed {
+    margin: 73px auto 122px -36px;
+  }
+
+  .pay-and-feed__pointer_first {
+    top: 23.7%;
+    left: 37.1%;
+    width: 54px;
+  }
+
+  .pay-and-feed__pointer_second {
+    top: 50%;
+    left: 37.3%;
+    width: 54px;
+  }
+
+  .pay-and-feed__btn {
+    top: 79.8%;
+    right: 2.9%;
+    width: calc(571 / 610 * 100%);
+  }
+
+  .testimonials__container {
+    margin-top: 33px;
+  }
+
+  .testimonials__btn {
+    position: absolute;
+    top: 90.5%;
+    width: 300px;
+    padding: 0 61px 0 63px;
+  }
+
+  .comments {
+    margin: 172px auto 0 auto;
+  }
+
+  .comments__item {
+    margin: 0 auto 168px auto;
+  }
+
+  .comments__item:last-child {
+    margin: 0 auto 168px auto;
+  }
+
+  .comments__text {
+    margin: 13px 0 0 -1px;
+  }
+
+  .comments__name {
+    margin: 5px 0 0 10px;
+  }
+
+  .looking-at-animals {
+    height: 406px;
+  }
+
+  .looking-at-animals__container {
+    margin: 10px 0 0 0;
+  }
+
+  .title_looking-at-animals {
+    letter-spacing: -0.25px;
+  }
+
+  .animal__icon:nth-child(6) {
+    margin-right: -13px;
+  }
+
+  .animal__icons {
+    left: -1.5%;
+    width: calc(323 / 318 * 100%);
+  }
+
+  .btn__arrow-right_looking-at-animals {
+    top: 87.5%;
+    right: 48%;
+  }
+
+  .footer {
+    height: 78px;
+  }
+
+  .logo__link_footer {
+    margin: 2px 0 0 10px;
+  }
+
+  .info {
+    margin: 12px 0px 0 0;
+  }
+}

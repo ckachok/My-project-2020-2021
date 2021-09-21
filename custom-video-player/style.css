@@ -1,0 +1,233 @@
+/* Connect fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url("assets/fonts/Forum-Regular.ttf");
+}
+
+/* Basic styles */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #F7F7F7;
+  user-select: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #F7F7F7;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  max-width: 1440px;
+}
+
+.main-title {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+}
+
+/* Sections*/
+.section {
+  padding: 75px 0;
+}
+
+.section__title {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.section-white__title {
+  color: #9D8665;
+}
+
+/* Video */
+.section-video {
+  height: 844px;
+  padding-top: 90px;
+}
+
+.player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 714px;
+  background: #000000;
+}
+
+.btn-play {
+  position: absolute;
+  top: 205px;
+  left: 610px;
+  z-index: 100;
+  width: calc(100% - 1220px);
+  transition: transform 0.8s;
+  cursor: auto;
+}
+
+.btn-play:hover {
+  transform: scale(1.2);
+  transition: transform 0.8s;
+}
+
+.player__viewport {
+  height: 629px;
+  margin: 0 auto;
+}
+
+.player__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 4px 40px 0 41px;
+  background-color: #000000;
+}
+
+.prev,
+.playback,
+.next {
+  padding-right: 32px;
+  opacity: 1;
+  transition: opacity 0.7s;
+}
+
+.pause {
+  display: none;
+}
+
+.volume {
+  padding-right: 11px;
+  opacity: 1;
+  transition: opacity .7s;
+}
+
+.fullscreen {
+  opacity: 1;
+  transition: opacity .7s;
+}
+
+.prev:hover,
+.playback:hover,
+.next:hover,
+.volume:hover,
+.pause:hover,
+.fullscreen:hover {
+  opacity: .5;
+  transition: opacity .7s;
+}
+
+.progress {
+  height: 8px;
+  margin-bottom: 3px;
+  background: linear-gradient(to right, #24809E 0%, #24809E 47%, #C4C4C4 40%, #C4C4C4 100%);
+  outline: none;
+  transition: background .45s ease-in;
+  -webkit-appearance: none;
+}
+
+.progress::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #FFFFFF;
+}
+
+.playback__progress {
+  width: 820px;
+  margin-right: 32px;
+  background: #C4C4C4;
+}
+
+.volume__progress {
+  width: 155px;
+  margin-right: 39px;
+}
+
+.section-video__text-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.section-video__title {
+  width: 606px;
+}
+
+.section-video__text {
+  width: 720px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  color: #000000;
+}
